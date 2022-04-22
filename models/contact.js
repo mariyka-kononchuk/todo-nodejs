@@ -32,11 +32,11 @@ const contactSchema = Schema({
 
 const joiSchema = Joi.object({
   name: Joi.string().required(),
-  date: Joi.string().required(),
+  // date: Joi.string().required(),
   category: Joi.string().required(),
   content: Joi.string().required(),
-  dates: Joi.string(),
-  status: Joi.string()
+  // dates: Joi.string(),
+  // status: Joi.string()
 });
 
 const statusJoiSchema = Joi.object({
