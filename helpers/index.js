@@ -1,4 +1,4 @@
-const getDatesFromContent = require('./getDatesInContent');
+const getDatesFromContent = require('./getDatesFromContent');
 const createStatisticData = require('./createStatisticData');
 
 module.exports = {

@@ -23,7 +23,7 @@ const noteSchema = Schema({
   },
   status: {
     type: String,
-    default: "Active",
+    default: "active",
   },
 
 }, { versionKey: false, timestamps: true });
@@ -33,7 +33,6 @@ const joiSchema = Joi.object({
   category: Joi.string().required(),
   content: Joi.string().required(),
 });
-
 
 const Note = model('note', noteSchema);
 

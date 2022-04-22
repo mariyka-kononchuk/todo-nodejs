@@ -11,10 +11,10 @@ router.delete('/:id', controllerWrapper(controller.removeById));
 
 router.patch('/:id', validation(joiSchema), controllerWrapper(controller.updateNote));
 
+router.get('/stats', controllerWrapper(controller.getStats));
+
 router.get('/:id', controllerWrapper(controller.getById));
 
 router.get('/', controllerWrapper(controller.getAll));
-
-router.get('/stats', controllerWrapper(controller.getStats));
 
 module.exports = router;
