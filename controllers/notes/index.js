@@ -4,6 +4,7 @@ const add = require('./add');
 const removeById = require('./removeById');
 const updateNote = require('./updateNote');
 const getStats = require('./getStats');
+const removeAll = require('./removeAll');
 
 module.exports = {
   add,
@@ -11,5 +12,6 @@ module.exports = {
   updateNote,
   getById,
   getAll,
-  getStats
+  getStats,
+  removeAll
 };

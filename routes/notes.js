@@ -7,6 +7,8 @@ const { notes: controller } = require('../controllers');
 
 router.post('/', validation(joiSchema), controllerWrapper(controller.add));
 
+router.delete('/', controllerWrapper(controller.removeAll));
+
 router.delete('/:id', controllerWrapper(controller.removeById));
 
 router.patch('/:id', validation(joiSchema), controllerWrapper(controller.updateNote));
