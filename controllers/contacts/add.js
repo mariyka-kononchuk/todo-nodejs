@@ -1,10 +1,10 @@
 const { Contact } = require('../../models');
 const moment = require('moment');
-const { getDatesInContent } = require('../../helpers');
+const { getDatesFromContent } = require('../../helpers');
 
 const add = async (req, res) => {
   const { name, category, content } = req.body;
-  const dates = getDatesInContent(content);
+  const dates = getDatesFromContent(content);
   const date = moment().format('MMMM D, YYYY');
   const note = {
     name,

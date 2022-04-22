@@ -1,6 +1,6 @@
 const moment = require('moment');
 
-function getDatesInContent (content) {
+function getDatesFromContent (content) {
     const datesFound = content.match(/\d{1,2}\D\d{1,2}\D(\d{4}|\d{2})/g);
     let contentDates= [];
     let dates = ''
@@ -12,5 +12,5 @@ function getDatesInContent (content) {
     return
 }
 
-module.exports = getDatesInContent;
+module.exports = getDatesFromContent;
 
