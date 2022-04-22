@@ -4,30 +4,43 @@ const Joi = require('joi');
 const contactSchema = Schema({
   name: {
     type: String,
-    required: [true, 'Set name for contact'],
+    required: [true, 'Set name for note'],
   },
-  email: {
+  date: {
+    type: String,
+    
+  },
+  category: {
     type: String,
   },
-  phone: {
+  content: {
     type: String,
+    required: [true, 'Set content for note'],
   },
-  favorite: {
-    type: Boolean,
-    default: false,
+  dates: {
+    type: String,
+    default: "",
+  },
+  status: {
+    type: String,
+    default: "Active",
   },
 
 }, { versionKey: false, timestamps: true });
 
+
+
 const joiSchema = Joi.object({
   name: Joi.string().required(),
-  email: Joi.string().required(),
-  phone: Joi.string().required(),
-  favorite: Joi.bool()
+  date: Joi.string().required(),
+  category: Joi.string().required(),
+  content: Joi.string().required(),
+  dates: Joi.string(),
+  status: Joi.string()
 });
 
 const statusJoiSchema = Joi.object({
-  favorite: Joi.bool().required(),
+  status: Joi.string(),
 });
 
 const Contact = model('contact', contactSchema);
