@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-const notesRouter = require('./routes/api/notes');
+const notesRouter = require('./routes/notes');
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.use(logger(formatsLogger));
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/notes', notesRouter);
+app.use('/notes', notesRouter);
 
 app.use((req, res) => {
   res.status(404).json({ message: 'Not found' })
