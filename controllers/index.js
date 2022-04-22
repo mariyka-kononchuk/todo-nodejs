@@ -1,5 +1,5 @@
-const contacts = require('./contacts')
+const notes = require('./notes')
 
 module.exports = {
-  contacts
+  notes
 }

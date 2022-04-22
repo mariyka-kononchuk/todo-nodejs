@@ -1,4 +1,4 @@
-const { Contact } = require('../../models');
+const { Note } = require('../../models');
 const moment = require('moment');
 const { getDatesFromContent } = require('../../helpers');
 
@@ -14,7 +14,7 @@ const add = async (req, res) => {
     dates
   };
 
-  const result = await Contact.create(note);
+  const result = await Note.create(note);
 
   res.status(201).json({
     status: 'Success',

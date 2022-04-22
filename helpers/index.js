@@ -1,5 +1,5 @@
-const getDatesInContent = require('./getDatesInContent');
+const getDatesFromContent = require('./getDatesInContent');
 
 module.exports = {
-    getDatesInContent
+    getDatesFromContent
 }
