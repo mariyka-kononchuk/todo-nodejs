@@ -1,0 +1,65 @@
+[
+  {
+    "id": "id-1",
+    "name": "Shopping list",
+    "date": "April 05,2022",
+    "category": "Task",
+    "content": "Tomatoes, bread",
+    "dates": "",
+    "status": "active"
+  },
+  {
+    "id": "id-2",
+    "name": "The theory of evolution",
+    "date": "April 05,2022",
+    "category": "Random Thought",
+    "content": "The evolution is is based on the idea that all species? are related and gradually change over time",
+    "dates": "",
+    "status": "active"
+  },
+  {
+    "id": "id-3",
+    "name": "New feature",
+    "date": "April 05,2022",
+    "category": "Idea",
+    "content": "Implement a new process at work, deadline - 10/5/2022",
+    "dates": "10/5/2022",
+    "status": "active"
+  },
+  {
+    "id": "id-4",
+    "name": "Books",
+    "date": "April 05,2022",
+    "category": "Task",
+    "content": "The Lean Startup",
+    "dates": "",
+    "status": "active"
+  },
+  {
+    "id": "id-5",
+    "name": "Trip to Mexico",
+    "date": "April 08,2022",
+    "category": "Idea",
+    "content": "Contact tripadvisor 10/06/2022",
+    "dates": "10/06/2022",
+    "status": "active"
+  },
+  {
+    "id": "id-6",
+    "name": "Party",
+    "date": "April 05,2022",
+    "category": "Task",
+    "content": "Buy wine, cheese and meat",
+    "dates": "",
+    "status": "active"
+  },
+  {
+    "id": "id-7",
+    "name": "Children school",
+    "date": "April 05,2022",
+    "category": "Task",
+    "content": "Pay for second semester",
+    "dates": "",
+    "status": "active"
+  }
+]

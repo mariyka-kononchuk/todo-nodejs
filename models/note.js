@@ -8,10 +8,10 @@ const noteSchema = Schema({
   },
   date: {
     type: String,
-    
   },
   category: {
     type: String,
+    required: [true, 'Set category for note'],
   },
   content: {
     type: String,
@@ -28,25 +28,16 @@ const noteSchema = Schema({
 
 }, { versionKey: false, timestamps: true });
 
-
-
 const joiSchema = Joi.object({
   name: Joi.string().required(),
-  // date: Joi.string().required(),
   category: Joi.string().required(),
   content: Joi.string().required(),
-  // dates: Joi.string(),
-  // status: Joi.string()
 });
 
-const statusJoiSchema = Joi.object({
-  status: Joi.string(),
-});
 
 const Note = model('note', noteSchema);
 
 module.exports = {
   Note,
-  joiSchema,
-  statusJoiSchema
+  joiSchema
 };
