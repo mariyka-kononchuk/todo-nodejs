@@ -1,6 +1,8 @@
+// export { }
+import {Request, Response} from "express";
 const { Note } = require('../../models');
 
-const getAll = async (req, res) => {
+const getAll = async (req:Request, res:Response) => {
   const result = await Note.find({});
 
   res.json({

@@ -1,7 +1,9 @@
+// export {}
+import {Request, Response} from "express";
 const createError = require('http-errors');
 const { Note } = require('../../models');
 
-const getById = async (req, res) => {
+const getById = async (req:Request, res:Response) => {
   const { id } = req.params;
   const result = await Note.findById(id);
   if (!result) {

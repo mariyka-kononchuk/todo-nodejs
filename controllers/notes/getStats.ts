@@ -1,7 +1,9 @@
+// export {}
+import {Request, Response} from "express";
 const { Note } = require('../../models');
 const { createStatisticData } = require('../../helpers');
 
-const getStats = async (req, res) => {
+const getStats = async (req:Request, res:Response) => {
     const allNotes = await Note.find({});
     const result = createStatisticData(allNotes);
 

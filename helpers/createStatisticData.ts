@@ -1,12 +1,27 @@
+export {}
 const categoryName = ['Task', 'Idea', 'Random Thought'];
+interface INote {
+    id: string;
+    name: string;
+    date: string;
+    category: string;
+    content: string;
+    dates?: string;
+    status:string
+}
 
-function createStatisticData (data) {
+interface INewArray {
+  category: string;
+  status: string;
+}
+
+function createStatisticData (data:INote[]) {
     const totalData = [];
-    newArray = data.map(e => { return { category: e.category, status: e.status } });
+    let newArray:INewArray[] = data.map(e => { return { category: e.category, status: e.status } });
   
     for (const name of categoryName) {
-        let totalActive = 0;
-        let totalArchived = 0;
+        let totalActive:string | number = 0;
+      let totalArchived: string | number = 0;
         for (const item of newArray) {
             if (item.category === name && item.status === 'active') {
                 totalActive++;

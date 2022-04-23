@@ -1,14 +1,16 @@
+// export {}
+import {Request, Response} from "express";
 const createError = require('http-errors');
 const { Note } = require('../../models');
 
-const updateNote = async (req, res) => {
+const updateNote = async (req:Request, res:Response) => {
     const { id } = req.params;
     const { name, category, content } = req.body;
 
     const result = await Note.findByIdAndUpdate(
         id,
         { name, content, category },
-        { new: name, new: content, new: category }
+        { new: name, newContent: content, newCategory: category }
     );
     
     if (!result) {

@@ -1,7 +1,9 @@
+// export {}
+import {Request, Response} from "express";
 const { Note } = require('../../models');
 const createError = require('http-errors');
 
-const removeById = async (req, res) => {
+const removeById = async (req:Request, res:Response) => {
   const { id } = req.params;
   const result = await Note.findByIdAndRemove(id, req.body);
   if (!result) {

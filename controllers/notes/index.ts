@@ -1,4 +1,5 @@
-const getAll = require('./getAll.js');
+export {}
+const getAll = require('./getAll');
 const getById = require('./getById');
 const add = require('./add');
 const removeById = require('./removeById');
