@@ -1,8 +1,17 @@
 export {};
-const { Schema, model } = require('mongoose');
-const Joi = require('joi');
+import { Schema, model } from 'mongoose';
+import Joi from 'joi';
 
-const noteSchema = Schema({
+interface INote {
+  name: string;
+  date: string;
+  category: string;
+  content: string;
+  dates?: string;
+  status: string;
+}
+
+const noteSchema = new Schema<INote>({
   name: {
     type: String,
     required: [true, 'Set name for note'],
@@ -35,7 +44,7 @@ const joiSchema = Joi.object({
   content: Joi.string().required(),
 });
 
-const Note = model('note', noteSchema);
+const Note = model<INote>('note', noteSchema);
 
 module.exports = {
   Note,

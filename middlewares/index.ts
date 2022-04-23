@@ -1,6 +1,6 @@
 export {};
-const validation = require('./validation');
-const controllerWrapper = require('./controllerWrapper');
+import validation = require('./validation');
+import controllerWrapper = require('./controllerWrapper');
 
 module.exports = {
   validation,
