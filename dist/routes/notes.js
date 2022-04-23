@@ -1,0 +1,14 @@
+"use strict";
+var express = require('express');
+var router = express.Router();
+var _a = require('../middlewares'), validation = _a.validation, controllerWrapper = _a.controllerWrapper;
+var joiSchema = require('../models/note').joiSchema;
+var controller = require('../controllers').notes;
+router.post('/', validation(joiSchema), controllerWrapper(controller.add));
+router.delete('/', controllerWrapper(controller.removeAll));
+router.delete('/:id', controllerWrapper(controller.removeById));
+router.patch('/:id', validation(joiSchema), controllerWrapper(controller.updateById));
+router.get('/stats', controllerWrapper(controller.getStats));
+router.get('/:id', controllerWrapper(controller.getById));
+router.get('/', controllerWrapper(controller.getAll));
+module.exports = router;
