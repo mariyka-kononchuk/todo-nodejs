@@ -60,5 +60,8 @@
   "bugs": {
     "url": "https://github.com/mariyka-kononchuk/todo-nodejs/issues"
   },
-  "homepage": "https://github.com/mariyka-kononchuk/todo-nodejs#readme"
+  "homepage": "https://github.com/mariyka-kononchuk/todo-nodejs#readme",
+  "compilerOptions": {
+    "outDir": "dist"
+  }
 }
