@@ -1,3 +1,4 @@
+export {};
 const validation = require('./validation');
 const controllerWrapper = require('./controllerWrapper');
 

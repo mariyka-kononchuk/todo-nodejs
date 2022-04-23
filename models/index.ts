@@ -1,3 +1,4 @@
+export {};
 const { Note } = require('./note');
 
 module.exports = {
