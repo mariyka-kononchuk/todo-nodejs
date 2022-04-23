@@ -11,7 +11,7 @@ router.delete('/', controllerWrapper(controller.removeAll));
 
 router.delete('/:id', controllerWrapper(controller.removeById));
 
-router.patch('/:id', validation(joiSchema), controllerWrapper(controller.updateNote));
+router.patch('/:id', validation(joiSchema), controllerWrapper(controller.updateById));
 
 router.get('/stats', controllerWrapper(controller.getStats));
 

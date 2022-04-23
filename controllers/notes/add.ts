@@ -1,8 +1,9 @@
+import {Request, Response} from "express";
 const { Note } = require('../../models');
 const moment = require('moment');
 const { getDatesFromContent } = require('../../helpers');
 
-const add = async (req, res) => {
+const add = async (req:Request, res:Response) => {
   const { name, category, content } = req.body;
   const dates = getDatesFromContent(content);
   const date = moment().format('MMMM D, YYYY');
