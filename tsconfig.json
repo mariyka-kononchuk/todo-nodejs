@@ -1,20 +1,18 @@
 {
+    "extends": "@araclx/tsconfig",
     "compilerOptions": {
-        "module": "commonjs",
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
-        "target": "es6",
+        "noUnusedParameters": false,
+        "noUnusedLocals": false,
+        "lib": [
+            "ES2018"
+        ],
+        "module": "commonjs",
+        "target": "es5",
         "noImplicitAny": true,
         "moduleResolution": "node",
         "sourceMap": true,
-        "outDir": "dist",
-        "baseUrl": ".",
-        "paths": {
-            "*": [
-                "node_modules/*",
-                "src/types/*"
-            ]
-        }
+        "outDir": "dist"
     }
-    
 }
