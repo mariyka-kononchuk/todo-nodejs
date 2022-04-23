@@ -5,6 +5,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production ts-node ./bin/server.ts",
     "postinstall": "tsc",
+    "tsc": "./node_modules/typescript/bin/tsc",
     "start:dev": "cross-env NODE_ENV=development nodemon ./bin/server.ts",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js",
