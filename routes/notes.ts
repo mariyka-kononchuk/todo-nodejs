@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 const { validation, controllerWrapper } = require ('../middlewares');
-// import { validation } from '../middlewares/validation';
-// import { controllerWrapper} from '../middlewares/controllerWrapper';
 const { joiSchema} = require('../models/note');
 const { notes: controller } = require('../controllers');
 

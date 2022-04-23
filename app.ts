@@ -30,9 +30,5 @@ const errorHandler: ErrorRequestHandler = (err, req, res, next:NextFunction) => 
 };
 
 app.use(errorHandler);
-// app.use((err, req:Request, res:Response, next:NextFunction) => {
-//   const { status = 500, message = 'Server error' } = err
-//   res.status(status).json({ message: err.message })
-// });
 
 module.exports = app;
