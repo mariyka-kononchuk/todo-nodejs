@@ -1,4 +1,4 @@
-export {};
+// export {};
 const mongoose = require('mongoose')
 const app = require('../app.ts')
 
