@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "cross-env NODE_ENV=production ts-node ./bin/server.ts",
+    "postinstall": "tsc",
     "start:dev": "cross-env NODE_ENV=development nodemon ./bin/server.ts",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js",
