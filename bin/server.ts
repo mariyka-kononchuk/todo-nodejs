@@ -1,4 +1,4 @@
-// export {};
+export {};
 const mongoose = require('mongoose')
 const app = require('../app.ts')
 
@@ -9,7 +9,7 @@ mongoose.connect(DB_HOST)
     app.listen(PORT)
     console.log('Database connection successful')
   })
-  .catch((error) => {
+  .catch((error:any) => {
     console.log((error as Error).message)
     process.exit(1)
   })

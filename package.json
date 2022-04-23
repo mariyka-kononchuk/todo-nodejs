@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "start": "cross-env NODE_ENV=production node ./bin/server.ts",
+    "postinstall": "tsc",
     "start:dev": "cross-env NODE_ENV=development nodemon ./bin/server.ts",
     "lint": "eslint **/*.js",
-    "lint:fix": "eslint --fix **/*.js"
+    "lint:fix": "eslint --fix **/*.js",
+    "deploy": "git add . && git commit -m Heroku && git push heroku main"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.6.0",
@@ -40,5 +42,8 @@
     "nodemon": "^2.0.7",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
+  },
+  "engines": {
+    "node": "13.14.0"
   }
 }
