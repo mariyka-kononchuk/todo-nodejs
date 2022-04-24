@@ -20,8 +20,8 @@ function createStatisticData (data:INote[]) {
     let newArray:INewArray[] = data.map(e => { return { category: e.category, status: e.status } });
   
     for (const name of categoryName) {
-        let totalActive:string | number = 0;
-      let totalArchived: string | number = 0;
+        let totalActive:number = 0;
+      let totalArchived:number = 0;
         for (const item of newArray) {
             if (item.category === name && item.status === 'active') {
                 totalActive++;
@@ -30,13 +30,6 @@ function createStatisticData (data:INote[]) {
                 totalArchived++;
             }
         }
-
-    if (totalActive === 0) {
-      totalActive = ''
-    }
-    if (totalArchived === 0) {
-      totalArchived = ''
-    }
     
     const newTotalData = {
       category: name,
@@ -46,7 +39,7 @@ function createStatisticData (data:INote[]) {
     totalData.push(newTotalData);
     
     for (const item of totalData) {
-        const index = totalData.findIndex(item => item.active === '' && item.archived === '');
+        const index = totalData.findIndex(item => item.active === 0 && item.archived === 0);
         if (index !== -1) {
             totalData.splice(index, 1);
         }
