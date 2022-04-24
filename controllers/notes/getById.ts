@@ -1,13 +1,10 @@
 import {Request, Response} from "express";
-const createError = require('http-errors');
-const { Note } = require('../../models');
+const { getByIdNote } = require('../../services/notes');
 
 const getById = async (req:Request, res:Response) => {
   const { id } = req.params;
-  const result = await Note.findById(id);
-  if (!result) {
-    throw createError(404, `Note with id:${id} not found`);
-  }
+  const result = await getByIdNote(id);
+  
   res.json({
     status: 'Success',
     code: 200,

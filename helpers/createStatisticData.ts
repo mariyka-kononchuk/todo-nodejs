@@ -20,7 +20,7 @@ function createStatisticData (data:INote[]) {
     let newArray:INewArray[] = data.map(e => { return { category: e.category, status: e.status } });
   
     for (const name of categoryName) {
-        let totalActive:number = 0;
+      let totalActive:number = 0;
       let totalArchived:number = 0;
         for (const item of newArray) {
             if (item.category === name && item.status === 'active') {
