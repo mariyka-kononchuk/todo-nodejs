@@ -1,8 +1,8 @@
 import {Request, Response} from "express";
-const { Note } = require('../../models');
+const { removeAllNotes } = require('../../services/notes');
 
 const removeAll = async (req:Request, res:Response) => {
-  const result = await Note.remove({});
+  const result = await removeAllNotes();
 
   res.json({
     status: 'Success',

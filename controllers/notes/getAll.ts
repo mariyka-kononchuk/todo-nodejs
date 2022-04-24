@@ -1,8 +1,8 @@
 import {Request, Response} from "express";
-const { Note } = require('../../models');
+const { getAllNotes } = require('../../services/notes');
 
 const getAll = async (req:Request, res:Response) => {
-  const result = await Note.find({});
+  const result = await getAllNotes();
 
   res.json({
     status: 'Success',

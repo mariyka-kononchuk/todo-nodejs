@@ -1,20 +1,11 @@
 import {Request, Response} from "express";
-const createError = require('http-errors');
-const { Note } = require('../../models');
+const { updateByIdNote } = require('../../services/notes');
 
-const updateNote = async (req:Request, res:Response) => {
+const updateById = async (req:Request, res:Response) => {
     const { id } = req.params;
     const { name, category, content } = req.body;
 
-    const result = await Note.findByIdAndUpdate(
-        id,
-        { name, content, category },
-        { new: name, newContent: content, newCategory: category }
-    );
-    
-    if (!result) {
-        throw createError(404, `Note with id:${id} not found`);
-    }
+    const result = await updateByIdNote(id, name, category, content)
 
     res.json({
         status: 'Success',
@@ -26,4 +17,4 @@ const updateNote = async (req:Request, res:Response) => {
   });
 };
 
-module.exports = updateNote;
+module.exports = updateById;
