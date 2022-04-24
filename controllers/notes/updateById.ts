@@ -4,7 +4,6 @@ const { updateByIdNote } = require('../../services/notes');
 const updateById = async (req:Request, res:Response) => {
     const { id } = req.params;
     const { name, category, content } = req.body;
-
     const result = await updateByIdNote(id, name, category, content)
 
     res.json({
